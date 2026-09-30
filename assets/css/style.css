@@ -1,0 +1,35 @@
+/* ---------------Box Sizing----------------- */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Skip link utility: hidden until focused */
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* -------- Global Styles --------*/
+
+body{
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+}
+
+header.primary {
+    background-color: #3b6b8b;
+    color: #ffffff;
+    text-align: center;
+    text-shadow: 2px 2px #000000;
+}
