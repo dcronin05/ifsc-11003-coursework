@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="IFSC 11003 Coursework - Module 2 Assignment"
     />
     <meta name="author" content="Daniel Cronin" />
-    <script src="./script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <title>Web Technologies - Module 2 Assignment Page</title>
     <link rel="icon" type="image/svg+xml" href="https://dcron.in/favicon.svg" />
     <link
@@ -26,8 +26,8 @@
   </head>
 
   <body>
-    <section class="navbar">
-      <a href="/" class="breadcrumbs">
+    <header class="navbar">
+      <a href="../" class="breadcrumbs">
         <img
           src="https://cdn.dcron.in/cronin.one-filled-transparent.svg"
           class="logo"
@@ -35,7 +35,7 @@
         />
         web-tech.dcron.in - Module 2 Assignment Page
       </a>
-    </section>
+    </header>
 
     <main id="content">
       <article>
@@ -44,11 +44,17 @@
         </header>
         <nav class="links">
           <ul>
-            <li><a href="#content">Home</a></li>
-            <li><a href="#semantic-html">HTML Basics</a></li>
-            <li><a href="#why-semantics">Accessibility</a></li>
+            <li><a href="#semantic-html">Semantic HTML</a></li>
+            <li><a href="#common-principles">Principles</a></li>
+            <li><a href="#review-steps">Reviewing</a></li>
+            <li><a href="#useful-terms">Terms</a></li>
+            <li><a href="#writing-code-clearly">Writing Code</a></li>
+            <li>
+              <a href="#perspective-on-the-web">Perspective on the Web</a>
+            </li>
+            <li><a href="#semantic-structure-in-practice">In Practice</a></li>
             <li><a href="#resources">Resources</a></li>
-            <li><a href="#about-this-site">About</a></li>
+            <li><a href="#about">About</a></li>
           </ul>
         </nav>
         <section id="semantic-html">
@@ -62,41 +68,46 @@
           </p>
 
           <p>
-            HTML stands for HyperText Markup Language. It describes the
-            structure and meaning of content rather than how that content should
-            look. CSS is generally responsible for presentation, while
-            JavaScript can add behavior and interactivity.
+            <abbr title="HyperText Markup Language">HTML</abbr> stands for
+            HyperText Markup Language. It describes the structure and meaning of
+            content rather than how that content should look. CSS is generally
+            responsible for presentation, while JavaScript can add behavior and
+            interactivity.
           </p>
 
           <h3>Why Semantics Matter</h3>
 
           <p>
-            Semantic HTML uses elements according to the meaning of the content
-            they contain. Choosing an element because of what it represents,
-            rather than because of its default appearance, produces documents
-            that are easier to understand and maintain.
+            Semantic <abbr>HTML</abbr> uses elements according to the meaning of
+            the content they contain. Choosing an element because of what it
+            represents, rather than because of its default appearance, produces
+            documents that are easier to understand and maintain.
           </p>
 
           <p>
-            Semantic structure is especially important for accessibility. Screen
-            readers and other assistive technologies can use the structure of a
-            document to help users navigate between major regions, headings,
-            lists, and other types of content.
+            Semantic structure is <strong>especially important</strong> for
+            accessibility. Screen readers and other assistive technologies can
+            use the structure of a document to help users navigate between major
+            regions, headings, lists, and other types of content.
           </p>
 
           <p>
-            Developers should not choose HTML elements simply because they make
-            text bold, italic, large, or small. The meaning of the content
-            should determine the markup. Visual appearance can be controlled
-            separately with CSS.
+            Developers should <strong>not</strong> choose
+            <abbr>HTML</abbr> elements simply because they make text bold,
+            italic, large, or small. The meaning of the content should determine
+            the markup. Visual appearance can be controlled separately with
+            <abbr title="Cascading Style Sheets">CSS</abbr>.
           </p>
 
           <p>
-            The Web Accessibility Initiative, commonly abbreviated WAI, develops
+            The Web Accessibility Initiative, commonly abbreviated
+            <abbr title="Web Accessibility Initiative">WAI</abbr>, develops
             standards and supporting materials that help make the web more
             accessible to people with disabilities.
           </p>
+        </section>
 
+        <section id="common-principles">
           <h2>Common Principles for Well-Structured Pages</h2>
 
           <ul>
@@ -113,166 +124,193 @@
           </ul>
         </section>
 
-        <h2>Steps for Reviewing an HTML Document</h2>
+        <section id="review-steps">
+          <h2>Steps for Reviewing an HTML Document</h2>
 
-        <ul>
-          <li>Identify the major regions of the page.</li>
-          <li>Check that headings create a logical hierarchy.</li>
-          <li>
-            Review lists, quotations, abbreviations, and other specialized
-            content.
-          </li>
-          <li>Confirm that images have appropriate alternative text.</li>
-          <li>
-            Inspect the document for unnecessary or incorrectly used elements.
-          </li>
-          <li>Run the completed page through an HTML validator.</li>
-        </ul>
-
-        <h2>Useful HTML Terms</h2>
-
-        <dl>
-          <dt>Element</dt>
-          <dd>
-            A structural or semantic component of an HTML document. Examples
-            include headings, paragraphs, links, and lists.
-          </dd>
-          <dt>Attribute</dt>
-          <dd>
-            Additional information placed on an HTML element. Attributes can
-            describe characteristics such as a link destination, an image
-            source, or the language of a document.
-          </dd>
-          <dt>Semantic HTML</dt>
-          <dd>
-            The practice of choosing HTML elements based on the meaning and
-            purpose of the content they contain.
-          </dd>
-          <dt>Validation</dt>
-          <dd>
-            The process of checking markup against the rules of the HTML
-            specification to identify errors and invalid structures.
-          </dd>
-          <dt>Progressive Enhancement</dt>
-          <dd>
-            An approach to web development that begins with meaningful,
-            accessible content and functionality before adding more advanced
-            presentation or behavior.
-          </dd>
-        </dl>
-
-        <h2>Writing Code Clearly</h2>
-
-        <p>
-          HTML documents are easier to maintain when developers follow
-          consistent formatting conventions. For example, a developer might use
-          the code fragment <code>class="featured"</code> to identify a
-          particular classification within a document.
-        </p>
-
-        <p>
-          When referring to code in technical writing, it is important to
-          distinguish the code itself from the surrounding explanation.
-        </p>
-
-        <p>
-          Tim Berners-Lee has emphasized that the value of the web comes from
-          its ability to connect people and information.
-        </p>
-
-        <blockquote>
-          <p>
-            "The power of the Web is in its universality. Access by everyone
-            regardless of disability is an essential aspect.
-          </p>
-        </blockquote>
-
-        <aside>
-          <p>
-            This statement appears in materials from the World Wide Web
-            Consortium, often referred to as the W3C, and reflects an important
-            principle behind accessible web development.
-          </p>
-        </aside>
-
-        <h2>Semantic Structure in Practice</h2>
-
-        <p>
-          A well-structured page does not need to be visually complicated. Even
-          a simple article can contain several meaningful regions. The page
-          might begin with introductory information and navigation, followed by
-          its primary content. Within that content, related topics can be
-          grouped together while still belonging to a larger article.
-        </p>
-        <p>
-          The distinction between structure and appearance is important. A
-          heading is not simply large text. A quotation is not simply indented
-          text. Important content is not simply bold text. Each has meaning that
-          can be represented directly in HTML.
-        </p>
-
-        <!-- 
-          <figure> code below copied wholesale from Claude Code. I asked it
-          for help with the citation, and kept it's caption sugestions as 
-          well.
-        -->
-
-        <figure>
-          <img
-            src="https://cdn.dcron.in/clipboard-1790903800796.png"
-            alt="Browser screenshot of a simple demo page: a banner photo of a tree-lined path, a 'My website' heading, placeholder paragraphs, and a photo of a man holding a child."
-          />
-          <figcaption>
-            A simple page with clear regions (banner, heading, body content),
-            the kind of structure semantic elements like
-            <code>&lt;header&gt;</code> and <code>&lt;main&gt;</code> describe.
-            <small>
-              Image:
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images"
-              >
-                <cite>Responsive images</cite>
-              </a>
-              , MDN Web Docs, by Mozilla Contributors,
-              <a href="https://creativecommons.org/licenses/by-sa/2.5/">
-                CC BY-SA 2.5 </a
-              >.
-            </small>
-          </figcaption>
-        </figure>
-
-        <h2 class="resources">Recommended Resources</h2>
-
-        <ul>
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
-              MDN Web Docs
-            </a>
-          </li>
-          <li>
-            <a href="https://html.spec.whatwg.org/">HTML Living Standard</a>
-          </li>
-          <li>
-            <a href="https://validator.w3.org/">
-              W3C Markup Validation Service
-            </a>
-          </li>
-          <li>
-            <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a>
-          </li>
-        </ul>
-
-        <section id="about-this-site">
-          <h2 class="resources">About This Site</h2>
-          <p>
-            Web Foundations is a learning resource for students studying modern
-            front-end development. The material emphasizes standards-based
-            development, semantic HTML, accessibility, and the use of the native
-            web platform.
-          </p>
-          <p>Content prepared for Web Foundations</p>
+          <ol>
+            <li>Identify the major regions of the page.</li>
+            <li>Check that headings create a logical hierarchy.</li>
+            <li>
+              Review lists, quotations, abbreviations, and other specialized
+              content.
+            </li>
+            <li>Confirm that images have appropriate alternative text.</li>
+            <li>
+              Inspect the document for unnecessary or incorrectly used elements.
+            </li>
+            <li>Run the completed page through an HTML validator.</li>
+          </ol>
         </section>
+
+        <section id="useful-terms">
+          <h2>Useful HTML Terms</h2>
+
+          <dl>
+            <dt>Element</dt>
+            <dd>
+              A structural or semantic component of an HTML document. Examples
+              include headings, paragraphs, links, and lists.
+            </dd>
+            <dt>Attribute</dt>
+            <dd>
+              Additional information placed on an
+              <abbr>HTML</abbr> element. Attributes can describe characteristics
+              such as a link destination, an image source, or the language of a
+              document.
+            </dd>
+            <dt>Semantic HTML</dt>
+            <dd>
+              The practice of choosing
+              <abbr>HTML</abbr> elements based on the meaning and purpose of the
+              content they contain.
+            </dd>
+            <dt>Validation</dt>
+            <dd>
+              The process of checking markup against the rules of the
+              <abbr>HTML</abbr>
+              specification to identify errors and invalid structures.
+            </dd>
+            <dt>Progressive Enhancement</dt>
+            <dd>
+              An approach to web development that begins with meaningful,
+              accessible content and functionality before adding more advanced
+              presentation or behavior.
+            </dd>
+          </dl>
+        </section>
+
+        <section id="writing-code-clearly">
+          <h2>Writing Code Clearly</h2>
+
+          <p>
+            <abbr>HTML</abbr> documents are easier to maintain when developers
+            follow consistent formatting conventions. For example, a developer
+            might use the code fragment <code>class="featured"</code> to
+            identify a particular classification within a document.
+          </p>
+
+          <p>
+            When referring to code in technical writing, it is important to
+            distinguish the code itself from the surrounding explanation.
+          </p>
+        </section>
+
+        <section id="perspective-on-the-web">
+          <h2>A Perspective on the Web</h2>
+
+          <p>
+            Tim Berners-Lee has emphasized that the value of the web comes from
+            its ability to connect people and information.
+          </p>
+
+          <blockquote>
+            <p>
+              &ldquo;The power of the Web is in its universality. Access by everyone
+              regardless of disability is an essential aspect.&rdquo;
+            </p>
+          </blockquote>
+
+          <aside>
+            <p>
+              This statement appears in materials from the World Wide Web
+              Consortium, often referred to as the
+              <abbr title="World Wide Web Consortium">W3C</abbr>, and reflects
+              an important principle behind accessible web development.
+            </p>
+          </aside>
+        </section>
+
+        <section id="semantic-structure-in-practice">
+          <h2>Semantic Structure in Practice</h2>
+
+          <p>
+            A well-structured page does not need to be visually complicated.
+            Even a simple article can contain several meaningful regions. The
+            page might begin with introductory information and navigation,
+            followed by its primary content. Within that content, related topics
+            can be grouped together while still belonging to a larger article.
+          </p>
+          <p>
+            The distinction between structure and appearance is important. A
+            heading is not simply large text. A quotation is not simply indented
+            text. Important content is <em>not</em> simply bold text. Each has
+            meaning that can be represented directly in <abbr>HTML</abbr>.
+          </p>
+
+          <!-- 
+            <figure> code below copied wholesale from Claude Code. I asked it
+            for help with the citation, and kept it's caption sugestions as 
+            well.
+          -->
+          <figure>
+            <img
+              src="https://cdn.dcron.in/clipboard-1790903800796.png"
+              alt="Browser screenshot of a simple demo page: a banner photo of a tree-lined path, a 'My website' heading, placeholder paragraphs, and a photo of a man holding a child."
+            />
+            <figcaption>
+              A simple page with clear regions (banner, heading, body content),
+              the kind of structure semantic elements like
+              <code>&lt;header&gt;</code> and
+              <code>&lt;main&gt;</code> describe.
+              <small>
+                Image:
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images"
+                  ><cite>Responsive images</cite></a
+                >, MDN Web Docs, by Mozilla Contributors,
+                <a href="https://creativecommons.org/licenses/by-sa/2.5/">
+                  CC BY-SA 2.5</a
+                >.
+              </small>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="resources">
+          <h2 class="resources">Recommended Resources</h2>
+
+          <ul>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+                MDN Web Docs
+              </a>
+            </li>
+            <li>
+              <a href="https://html.spec.whatwg.org/">HTML Living Standard</a>
+            </li>
+            <li>
+              <a href="https://validator.w3.org/">
+                W3C Markup Validation Service
+              </a>
+            </li>
+            <li>
+              <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Once again citation language and code provided by Claude Code-->
+        <footer id="about">
+          <p>
+            <small>
+              Article content adapted from
+              <cite>Unstructured Content for the Assignment</cite>, provided for
+              the M2 assignment in IFSC 11003 Web Technologies, University of
+              Arkansas at Little Rock, Fall 2026. Image credit appears in its
+              caption.
+            </small>
+          </p>
+        </footer>
       </article>
     </main>
+    <footer class="footer">
+      <p>
+        <small>
+          &copy; 2026 Daniel Cronin &bull;
+          <a href="https://dcron.in">dcron.in</a> &bull;
+          <a href="#content">Back to top &uarr;</a>
+        </small>
+      </p>
+    </footer>
   </body>
 </html>

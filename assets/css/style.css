@@ -6,7 +6,6 @@
 .breadcrumbs {
   display: flex;
   align-items: center;
-  text-decoration: none;
   font-size: x-large;
   padding: 10px 0;
   gap: 1rem;
@@ -14,6 +13,7 @@
 
 .breadcrumbs:link {
   color: #a9a9b3;
+  text-decoration: none;
 }
 
 .breadcrumbs:hover {
@@ -23,6 +23,15 @@
 
 .breadcrumbs:visited {
   color: #8f8f8f;
+}
+
+nav.links ul {
+  margin-left: 1rem;
+  gap: .15rem;
+}
+
+footer.footer {
+  text-align: center;
 }
 
 html {
@@ -44,17 +53,7 @@ body {
 }
 
 a {
-  text-decoration: underline dashed;
-}
-
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
+  text-decoration: none;
 }
 
 a:link {
@@ -88,8 +87,8 @@ dl dd {
   padding: 5px 0 20px 0;
 }
 
-ul {
-  margin: 0 auto;
+ul, ol {
+  margin: 0 1rem;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
