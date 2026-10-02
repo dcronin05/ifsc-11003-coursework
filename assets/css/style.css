@@ -13,7 +13,7 @@
 }
 
 .breadcrumbs:link {
-  color: #747474;
+  color: #a9a9b3;
 }
 
 .breadcrumbs:hover {
@@ -25,15 +25,12 @@
   color: #8f8f8f;
 }
 
-.links a {
-  text-decoration: none;
-  color: #cccccc;
-}
-
 html {
   height: 100%;
-  background-color: #1a1a1a;
-  color: #cccccc;
+  background-color: #1b1c1d;
+  color: #cbcbcf;
+  font-family: sans-serif;
+  font-size: 18px;
 }
 
 h1 {
@@ -41,8 +38,6 @@ h1 {
 }
 
 body {
-  font-family: sans-serif;
-  color: #cccccc;
   max-width: 100ch;
   margin: 0 auto;
   padding: 0 1rem;
@@ -52,25 +47,32 @@ a {
   text-decoration: underline dashed;
 }
 
-pre {
-  white-space: pre-wrap;
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 a:link {
-  color: #cccccc;
+  color: #63b3ed;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #cccccc;
+  color: #63b3ed;
 }
 
 a:hover {
-  font-weight: bold;
-  color: #cccccc;
+  text-decoration: underline dashed;
+  color: #63b3ed;
 }
 
 a:active {
-  color: #cccccc;
+  color: #63b3ed;
 }
 
 .title {
@@ -83,9 +85,33 @@ a:active {
 }
 
 dl dd {
-  padding-top: 10px;
+  padding: 5px 0 20px 0;
 }
 
 ul {
-  padding-left: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+h1,
+h2,
+h3 {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  background-color: #232426;
+  color: #ffffff;
+  padding: 20px 20px;
+  border-radius: 20px;
+  border: 1px solid #ffffff;
+}
+
+p {
+  margin: 0.5rem auto;
 }

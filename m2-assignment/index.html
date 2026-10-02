@@ -11,6 +11,18 @@
     <meta name="author" content="Daniel Cronin" />
     <script src="./script.js"></script>
     <title>Web Technologies - Module 2 Assignment Page</title>
+    <link rel="icon" type="image/svg+xml" href="https://dcron.in/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://dcron.in/favicon-96x96.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://dcron.in/apple-touch-icon.png"
+    />
   </head>
 
   <body>
@@ -25,20 +37,20 @@
       </a>
     </section>
 
-    <section id="content">
-      <header>
-        <h1 class="title">Web Foundations: Building Meaningful Pages</h1>
-      </header>
-      <nav class="links">
-        <ul>
-          <li><a href="#content">Home</a></li>
-          <li><a href="#semantic-html">HTML Basics</a></li>
-          <li>Accessibility</li>
-          <li>Resources</li>
-          <li>Contact</li>
-        </ul>
-      </nav>
+    <main id="content">
       <article>
+        <header>
+          <h1 class="title">Web Foundations: Building Meaningful Pages</h1>
+        </header>
+        <nav class="links">
+          <ul>
+            <li><a href="#content">Home</a></li>
+            <li><a href="#semantic-html">HTML Basics</a></li>
+            <li><a href="#why-semantics">Accessibility</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#about-this-site">About</a></li>
+          </ul>
+        </nav>
         <section id="semantic-html">
           <h2>Understanding Semantic HTML</h2>
 
@@ -163,47 +175,104 @@
           distinguish the code itself from the surrounding explanation.
         </p>
 
-        <section id="source-content">
-          <pre><code>Tim Berners-Lee has emphasized that the value of the web comes from its ability to connect people and information.
-    
-“The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.”
+        <p>
+          Tim Berners-Lee has emphasized that the value of the web comes from
+          its ability to connect people and information.
+        </p>
 
-This statement appears in materials from the World Wide Web Consortium, often referred to as the W3C, and reflects
-an important principle behind accessible web development.
+        <blockquote>
+          <p>
+            "The power of the Web is in its universality. Access by everyone
+            regardless of disability is an essential aspect.
+          </p>
+        </blockquote>
 
-Semantic Structure in Practice
+        <aside>
+          <p>
+            This statement appears in materials from the World Wide Web
+            Consortium, often referred to as the W3C, and reflects an important
+            principle behind accessible web development.
+          </p>
+        </aside>
 
-A well-structured page does not need to be visually complicated. Even a simple article can contain several
-meaningful regions. The page might begin with introductory information and navigation, followed by its primary
-content. Within that content, related topics can be grouped together while still belonging to a larger article.
+        <h2>Semantic Structure in Practice</h2>
 
-The distinction between structure and appearance is important. A heading is not simply large text. A quotation is
-not simply indented text. Important content is not simply bold text. Each has meaning that can be represented
-directly in HTML.
+        <p>
+          A well-structured page does not need to be visually complicated. Even
+          a simple article can contain several meaningful regions. The page
+          might begin with introductory information and navigation, followed by
+          its primary content. Within that content, related topics can be
+          grouped together while still belonging to a larger article.
+        </p>
+        <p>
+          The distinction between structure and appearance is important. A
+          heading is not simply large text. A quotation is not simply indented
+          text. Important content is not simply bold text. Each has meaning that
+          can be represented directly in HTML.
+        </p>
 
-Image: Embed an image of your choice.
+        <!-- 
+          <figure> code below copied wholesale from Claude Code. I asked it
+          for help with the citation, and kept it's caption sugestions as 
+          well.
+        -->
 
-The image shows a laptop displaying a webpage diagram divided into labeled regions for the page header, navigation,
-main content, article sections, and footer.
+        <figure>
+          <img
+            src="https://cdn.dcron.in/clipboard-1790903800796.png"
+            alt="Browser screenshot of a simple demo page: a banner photo of a tree-lined path, a 'My website' heading, placeholder paragraphs, and a photo of a man holding a child."
+          />
+          <figcaption>
+            A simple page with clear regions (banner, heading, body content),
+            the kind of structure semantic elements like
+            <code>&lt;header&gt;</code> and <code>&lt;main&gt;</code> describe.
+            <small>
+              Image:
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Responsive_images"
+              >
+                <cite>Responsive images</cite>
+              </a>
+              , MDN Web Docs, by Mozilla Contributors,
+              <a href="https://creativecommons.org/licenses/by-sa/2.5/">
+                CC BY-SA 2.5 </a
+              >.
+            </small>
+          </figcaption>
+        </figure>
 
-Caption: Semantic HTML gives different regions of a webpage meaningful roles rather than treating the entire page as
-one collection of generic containers.
+        <h2 class="resources">Recommended Resources</h2>
 
-Recommended Resources
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">
+              MDN Web Docs
+            </a>
+          </li>
+          <li>
+            <a href="https://html.spec.whatwg.org/">HTML Living Standard</a>
+          </li>
+          <li>
+            <a href="https://validator.w3.org/">
+              W3C Markup Validation Service
+            </a>
+          </li>
+          <li>
+            <a href="https://www.w3.org/WAI/">Web Accessibility Initiative</a>
+          </li>
+        </ul>
 
-MDN Web Docs
-HTML Living Standard
-Web Accessibility Initiative
-W3C Markup Validation Service
-
-About This Site
-
-Web Foundations is a learning resource for students studying modern front-end development. The material emphasizes
-standards-based development, semantic HTML, accessibility, and the use of the native web platform.
-
-Content prepared for Web Foundations</code></pre>
+        <section id="about-this-site">
+          <h2 class="resources">About This Site</h2>
+          <p>
+            Web Foundations is a learning resource for students studying modern
+            front-end development. The material emphasizes standards-based
+            development, semantic HTML, accessibility, and the use of the native
+            web platform.
+          </p>
+          <p>Content prepared for Web Foundations</p>
         </section>
       </article>
-    </section>
+    </main>
   </body>
 </html>
