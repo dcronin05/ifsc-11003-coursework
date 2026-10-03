@@ -25,6 +25,14 @@
   color: #8f8f8f;
 }
 
+img {
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 nav.links ul {
   margin-left: 1rem;
   gap: .15rem;
