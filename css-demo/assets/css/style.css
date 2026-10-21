@@ -186,7 +186,43 @@ figure {
 }
 
 #practice ol {
-    list-style-type:;
+    list-style-type: "\f013   ";
+}
+
+#practice ol li::marker {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+#practice ul ul {
+    list-style-type: square;
+}
+
+#practice dl {
+}
+#practice dt {
+    font-weight: bold;
+}
+#practice dd {
+    margin: 0;
+}
+
+#practice dd + dt {
+    margin-top: 20px;
+    color: red;
+}
+
+#practice blockquote {
+    border: 4px double #c0c0c0;
+    padding: 20px 40px;
+    margin: 40px 80px;
+    border-radius: 30px 0;
+    background-color: #3b638b;
+    color: #fff;
+    text-shadow: 1px 1px #000;
+}
+
+#practice cite {
 }
 
 table {
