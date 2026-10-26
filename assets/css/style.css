@@ -95,7 +95,8 @@ dl dd {
   padding: 5px 0 20px 0;
 }
 
-ul, ol {
+ul,
+ol {
   margin: 0 1rem;
   padding: 0 20px;
   display: flex;
@@ -122,3 +123,9 @@ pre {
 p {
   margin: 0.5rem auto;
 }
+
+/* li>ul {
+  padding-left: 0;
+  list-style-type: none;
+  margin-top: 0.35rem;
+} */
