@@ -1,24 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>IFSC 11003 - Prototype</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Web Technologies - Module 3 Assignment" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="IFSC 11003 Coursework - Module 4 Assignment" />
     <meta name="author" content="Daniel Cronin" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Style Sheet -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-    <link href="../css-demo/assets/css/style.css" rel="stylesheet" />
+    <script src="../assets/js/script.js"></script>
+    <title>Web Technologies - Module 4 Assignment Page</title>
     <link rel="icon" type="image/svg+xml" href="https://dcron.in/favicon.svg" />
     <link
       rel="icon"
@@ -34,19 +23,25 @@
   </head>
 
   <body>
-    <a class="visually-hidden" href="#main-content">Skip to main content</a>
-    <header class="primary">
-      <h1><a href="index.html">Building the Modern Web</a></h1>
-      <p class="subtitle">HTML5, CSS, JavaScript Fundamentals</p>
-      <nav class="primary" aria-label="Primary">
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </nav>
-    </header>
-    mellencamp sm
+    <div>
+      <header class="navbar">
+        <section class="inner-nav">
+          <a href="../" class="breadcrumbs">
+            <section class="home-link">
+              <span id="terminal-icon">&gt;</span>
+              <span id="site-name">web-tech.dcron.in</span>
+              <span id="sub-folder">/css-demo</span>
+              <span id="cursor-icon"></span>
+            </section>
+          </a>
+        </section>
+        <section class="menu">
+          <span>
+            <a href="../m2-assignment/index.html">Module 2</a>
+          </span>
+        </section>
+      </header>
+    </div>
 
     <!-- Main landmark gives you a clean selector target for weeks 6–9 -->
     <main id="main-content" class="container">
@@ -142,11 +137,14 @@
           This is a paragraph. <em>Often times designers</em> will use
           <q>Dummy Text</q> as a <strong>placeholder</strong> in a document. An
           example of that text follows...Lorem ipsum dolor
-          <img
-            src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png"
-            alt="UA Little Rock Logo"
-            class="img-center"
-          />sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat
+          <span class="img-center-border">
+              <img
+                src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png"
+                alt="UA Little Rock Logo"
+                class="img-center"
+                />
+          </span>
+          sit amet, consectetuer <del>adipiscing elit</del>. Praesent volutpat
           velit sed massa. In volutpat eros sagittis ipsum. Donec fringilla
           risus nec nunc. Fusce tellus arcu, blandit quis, posuere in, porta
           vitae, lorem.
@@ -300,38 +298,14 @@
         </p>
       </section>
     </main>
-    <aside aria-label="Sidebar">
-      <div class="container">
-        <article class="widget">
-          <header>
-            <h2>Sample Sidebar Item</h2>
-          </header>
-
-          <p>
-            Quisque justo erat, varius placerat fermentum vel, iaculis vel
-            ligula...
-            <a href="#">Read More &raquo;</a>
-          </p>
-
-          <footer>Widget Footer</footer>
-        </article>
-        <article class="widget">
-          <header>
-            <h2>Sample Sidebar Item</h2>
-          </header>
-
-          <p>
-            Quisque justo erat, varius placerat fermentum vel, iaculis vel
-            ligula...
-            <a href="#">Read More &raquo;</a>
-          </p>
-
-          <footer>Widget Footer</footer>
-        </article>
-      </div>
-    </aside>
-    <footer class="primary">
-      <p>&copy; 2026 Your Name</p>
+    <footer class="footer">
+      <p>
+        <small>
+          &copy; 2026 Daniel Cronin &bull;
+          <a href="#content">Back to top &uarr;</a>
+        </small>
+      </p>
     </footer>
+
   </body>
 </html>

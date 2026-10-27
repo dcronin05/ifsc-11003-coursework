@@ -5,23 +5,23 @@
  * MIT License: https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md
  */
 
- /*
+/*
   * Theme colours copied from my dcron.in landing page
   * (generated with Hugo + Hello Friend NG, later cleaned up with AI assistance).
   */
 
-  :root {
-    --bg-color: #1b1c1d;
-    --card-bg: #232425;
-    --border-color: #3b3d42;
-    --text-color: #a9a9b3;
-    --text-light: #ffffff;
-    --accent-color: #fe5186;
-    --green-accent: #68d391;
-    --blue-accent: #63b3ed;
-    --font-mono: 'Fira Code', monospace;
-    --font-sans-mono: monospace;
-    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+:root {
+  --bg-color: #1b1c1d;
+  --card-bg: #232425;
+  --border-color: #3b3d42;
+  --text-color: #a9a9b3;
+  --text-light: #ffffff;
+  --accent-color: #fe5186;
+  --green-accent: #68d391;
+  --blue-accent: #63b3ed;
+  --font-mono: "Fira Code", monospace;
+  --font-sans-mono: monospace;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -32,16 +32,16 @@
 
 /* -------- Utility Styles --------*/
 .container {
-    width: 80vw;
-    max-width: 800px;
-    margin: 70px auto;
+  width: 80vw;
+  max-width: 800px;
+  width: 100%;
 }
 
 .navbar {
   display: flex;
   padding: 30px 0;
   color: var(--text-color);
-  font-family: var(--font-sans);
+  font-family: var(--font-sans-mono);
   justify-content: space-between;
 }
 
@@ -57,27 +57,58 @@
   font-weight: bold;
 }
 
-#site-name {
+#site-name,
+#sub-folder {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--text-light);
   font-weight: bold;
 }
 
+#sub-folder {
+  color: var(--blue-accent);
+}
+
+#cursor-icon {
+  display: inline-block;
+  width: 10px;
+  height: 1.1rem;
+  background-color: var(--accent-color);
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .menu {
   color: var(--text-color);
   font-weight: 400;
   display: flex;
+  flex-direction: row;
   gap: 20px;
   font-size: 1rem;
   align-items: center;
 }
 
 .menu span a {
+  display: inline-block;
   margin-left: 20px;
+  text-decoration: none;
+  color: var(--text-color);
 }
 
-
+.menu span a:hover {
+  color: var(--accent-color);
+  text-decoration: underline dashed;
+}
 
 .breadcrumbs {
   display: flex;
@@ -85,21 +116,11 @@
   justify-content: space-between;
 }
 
-.breadcrumbs:link {
-  color: #a9a9b3;
+.breadcrumbs:hover {
   text-decoration: none;
 }
 
-.breadcrumbs:hover {
-  font-weight: normal;
-  color: #8f8f8f;
-}
-
-.breadcrumbs:visited {
-  color: #8f8f8f;
-}
-
-figure img {
+figure {
   padding: 0;
   max-width: 100%;
   height: auto;
@@ -109,7 +130,7 @@ figure img {
 
 nav.links ul {
   margin-left: 1rem;
-  gap: .15rem;
+  gap: 0.15rem;
 }
 
 footer.footer {
@@ -136,43 +157,151 @@ body {
   padding: 0 1rem;
 }
 
-.main-content {
+#main-content {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  text-decoration: none;
+}
+
+#blog {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#blog h2 {
+  flex: 0 0 100%;
+}
+
+#blog article {
+  flex: 1;
+  font-size: 0.7rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-center-border {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--bg-color);
+}
+.img-center {
+  display: block;
+  border-radius: 11px;
+  padding: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  padding: 10px 0;
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-color);
+}
+
+th {
+  border-radius: 12px;
+  background-color: var(--border-color);
+  color: var(--text-light);
+  padding: 7.5px;
+  border: 0;
+}
+
+td {
+  /* border:1px solid #c0c0c0; */
+  padding: 5px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+td:hover {
+  border: 2px solid var(--border-color);
+  padding: 3px;
+  background-color: var(--bg-color);
+}
+
+a {
   color: var(--blue-accent);
   text-decoration: none;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+a:hover {
+  text-decoration: underline dashed;
 }
 
-.title {
-  display: inline-block;
-  text-align: left;
+dt {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  margin-top: 20px;
 }
 
-.logo {
-  width: 40px;
+dl {
+  margin-inline-start: 40px;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 
 dl dd {
-  padding: 5px 0 20px 0;
+  padding: 5px 0;
+  margin-inline-start: 0;
+  margin-bottom: 10px;
 }
 
 ul,
 ol {
-  margin: 0 1rem;
-  padding: 0 20px;
+  margin-top: 1.25rem;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-inline-start: 40px;
+}
+
+ol {
+  list-style-type: lower-roman;
 }
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--text-light);
   margin-bottom: 0.5rem;
+  font-family: var(--font-sans-mono);
+}
+
+blockquote {
+  border: 2px solid var(--blue-accent);
+  padding: 10px 10px 10px 20px;
+  margin: 40px 40px;
+  border-radius: 12px 40px;
+  background-color: var(--bg-color);
+  color: var(--text-light);
+}
+
+cite {
+  display: block;
+  margin-top: 10px;
+  text-align: right;
+  font-size: 0.8rem;
 }
 
 pre {
@@ -188,12 +317,20 @@ p {
   margin: 0.5rem auto;
 }
 
-@media (max-width: 600px) {
-    header {
-        font-size: 2.25rem;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
+figure {
+  margin: 0;
+  padding: 2px;
+}
+
+@media (max-width: 800px) {
+  body {
+    margin: 0 0;
+  }
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+  #blog article {
+    flex: 1 1 100%;
+  }
 }
