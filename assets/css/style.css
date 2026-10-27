@@ -1,14 +1,88 @@
+/*
+ * Based on the Hello Friend NG Hugo theme
+ * https://github.com/rhazdon/hugo-theme-hello-friend-ng
+ * Copyright (c) 2018 Track3, (c) 2019 panr, (c) 2019 Djordje Atlialp
+ * MIT License: https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md
+ */
+
+ /*
+  * Theme colours copied from my dcron.in landing page
+  * (generated with Hugo + Hello Friend NG, later cleaned up with AI assistance).
+  */
+
+  :root {
+    --bg-color: #1b1c1d;
+    --card-bg: #232425;
+    --border-color: #3b3d42;
+    --text-color: #a9a9b3;
+    --text-light: #ffffff;
+    --accent-color: #fe5186;
+    --green-accent: #68d391;
+    --blue-accent: #63b3ed;
+    --font-mono: 'Fira Code', monospace;
+    --font-sans-mono: monospace;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 * {
-  /* border: 1px solid white; */
+  box-sizing: border-box;
+  /* margin: 0; */
   padding: 2px;
 }
+
+/* -------- Utility Styles --------*/
+.container {
+    width: 80vw;
+    max-width: 800px;
+    margin: 70px auto;
+}
+
+.navbar {
+  display: flex;
+  padding: 30px 0;
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  justify-content: space-between;
+}
+
+.home-link {
+  gap: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+#terminal-icon {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+#site-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+.menu {
+  color: var(--text-color);
+  font-weight: 400;
+  display: flex;
+  gap: 20px;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.menu span a {
+  margin-left: 20px;
+}
+
+
 
 .breadcrumbs {
   display: flex;
   align-items: center;
-  font-size: x-large;
-  padding: 10px 0;
-  gap: 1rem;
+  justify-content: space-between;
 }
 
 .breadcrumbs:link {
@@ -44,9 +118,9 @@ footer.footer {
 
 html {
   height: 100%;
-  background-color: #1b1c1d;
-  color: #cbcbcf;
-  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
   font-size: 18px;
 }
 
@@ -55,31 +129,21 @@ h1 {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   max-width: 100ch;
-  margin: 0 auto;
+  margin: 0 70px;
   padding: 0 1rem;
 }
 
+.main-content {
+  color: var(--blue-accent);
+  text-decoration: none;
+}
+
 a {
-  text-decoration: none;
-}
-
-a:link {
-  color: #63b3ed;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #63b3ed;
-}
-
-a:hover {
-  text-decoration: underline dashed;
-  color: #63b3ed;
-}
-
-a:active {
-  color: #63b3ed;
+    color: inherit;
+    text-decoration: none;
 }
 
 .title {
@@ -107,7 +171,7 @@ ol {
 h1,
 h2,
 h3 {
-  color: #ffffff;
+  color: var(--text-light);
   margin-bottom: 0.5rem;
 }
 
@@ -124,8 +188,12 @@ p {
   margin: 0.5rem auto;
 }
 
-/* li>ul {
-  padding-left: 0;
-  list-style-type: none;
-  margin-top: 0.35rem;
-} */
+@media (max-width: 600px) {
+    header {
+        font-size: 2.25rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
